@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#F9F8FD">
+    
+    <!-- =========================================
+         1. SEO META TAGS (Optimized for Ranking)
+    ========================================== -->
+    <title>Abdur Rakib -COO Programming Hero & Phitron</title>
+    <meta name="title" content="Abdur Rakib-COO Programming Hero & Phitron">
+    <meta name="description" content="Abdur Rakib, COO at Programming Hero & Phitron. Strategic Advisor specializing in EdTech, scaling teams, and building the next generation of tech talent.">
+    <meta name="keywords" content="Abdur Rakib, COO Programming Hero, Phitron, EdTech Leader, Strategic Advisor, Abdur Rakib Portfolio, Bangladesh Tech Leader">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="author" content="Abdur Rakib">
+    <!-- IMPORTANT: Replace with your actual live domain URL for best results -->
+    <link rel="canonical" href="https://rakib.xyz/">
+
+    <!-- =========================================
+         2. OPEN GRAPH / FACEBOOK / LINKEDIN
+    ========================================== -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rakib.xyz/">
+    <meta property="og:title" content="Abdur Rakib-COO Programming Hero">
+    <meta property="og:description" content="Building lifelong learners who code. Discover the impact of Abdur Rakib in the EdTech industry.">
+    <meta property="og:image" content="https://abdurrakib.com/og-image.jpg">
+
+    <!-- =========================================
+         3. TWITTER CARD
+    ========================================== -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://rakib.xyz/">
+    <meta property="twitter:title" content="Abdur Rakib-COO Programming Hero">
+    <meta property="twitter:description" content="Building lifelong learners who code. Discover the impact of Abdur Rakib in the EdTech industry.">
+    <meta property="twitter:image" content="https://abdurrakib.com/og-image.jpg">
+
+    <!-- =========================================
+         4. STRUCTURED DATA (JSON-LD SCHEMA)
+    ========================================== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Abdur Rakib",
+      "jobTitle": "Chief Operating Officer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Programming Hero"
+      },
+      "url": "https://abdurrakib.com",
+      "sameAs": [
+        "https://www.facebook.com/abdurrakibzero/",
+        "https://bd.linkedin.com/in/abdurrakib0",
+        "https://www.youtube.com/@abdurrakib0"
+      ],
+      "description": "COO at Programming Hero & Phitron. Strategic Advisor helping build lifelong learners who code."
+    }
+    </script>
+
+    <!-- Performance Preconnects -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <!-- React & ReactDOM -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <!-- Babel for JSX -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="android-chrome-192x192.png" type="image/x-icon">
+
+    <style>
+        body { font-family: 'Poppins', sans-serif;}
+        
+        /* Initial Fade In for Hero */
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+
+        /* Scroll Reveal Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stagger delays for smoother effect */
+        .delay-100 { transition-delay: 0.1s; }
+        .delay-200 { transition-delay: 0.2s; }
+        .delay-300 { transition-delay: 0.3s; }
+
+        /* Hide Scrollbar for Slider */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body class="bg-[#F9F8FD]">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect, useRef } = React;
+
+        // --- Icon Components ---
+        const IconBase = ({ size = 24, className = "", children }) => (
+            <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+                {children}
+            </svg>
+        );
+
+        const Linkedin = (props) => <IconBase {...props}><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></IconBase>;
+        const Youtube = (props) => <IconBase {...props}><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></IconBase>;
+        const Facebook = (props) => <IconBase {...props}><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></IconBase>;
+        const ArrowRight = (props) => <IconBase {...props}><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></IconBase>;
+        const Briefcase = (props) => <IconBase {...props}><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></IconBase>;
+        const Users = (props) => <IconBase {...props}><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></IconBase>;
+        const Globe = (props) => <IconBase {...props}><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></IconBase>;
+        const Award = (props) => <IconBase {...props}><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></IconBase>;
+        const Mic = (props) => <IconBase {...props}><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></IconBase>;
+        const FileText = (props) => <IconBase {...props}><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></IconBase>;
+        const Video = (props) => <IconBase {...props}><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></IconBase>;
+        const Send = (props) => <IconBase {...props}><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></IconBase>;
+        const Menu = (props) => <IconBase {...props}><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="18" x2="20" y2="18"/></IconBase>;
+        const X = (props) => <IconBase {...props}><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></IconBase>;
+        const ChevronLeft = (props) => <IconBase {...props}><polyline points="15 18 9 12 15 6"/></IconBase>;
+        const ChevronRight = (props) => <IconBase {...props}><polyline points="9 18 15 12 9 6"/></IconBase>;
+
+
+        // --- Main Components ---
+
+        const Navbar = () => {
+          const [isOpen, setIsOpen] = useState(false);
+          const [scrolled, setScrolled] = useState(false);
+
+          useEffect(() => {
+            const handleScroll = () => setScrolled(window.scrollY > 50);
+            window.addEventListener('scroll', handleScroll);
+            return () => window.removeEventListener('scroll', handleScroll);
+          }, []);
+
+          return (
+            <nav role="navigation" aria-label="Main Navigation" className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 backdrop-blur-md border-b border-purple-100 shadow-sm' : 'bg-transparent'}`}>
+              <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="#" className="text-3xl font-bold text-[#5B219E]" aria-label="Abdur Rakib Home">
+                  Abdur Rakib.
+                </a>
+                
+                <div className="hidden md:flex space-x-8 items-center">
+                  {['Home', 'Experience', 'Testimonials', 'Content',].map((item) => (
+                    <a key={item} href={`#${item.toLowerCase()}`} className="text-slate-600 hover:text-[#9F51D6] transition-colors text-sm font-medium tracking-wide">
+                      {item}
+                    </a>
+                  ))}
+                  <a href="#newsletter" className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-[#9F51D6] to-fuchsia-600 text-white font-medium text-sm shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:-translate-y-0.5 transition-all flex items-center justify-center">
+                    Newsletter
+                  </a>
+                </div>
+
+                <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-slate-700" aria-label="Toggle Mobile Menu">
+                  {isOpen ? <X /> : <Menu />}
+                </button>
+              </div>
+
+              {isOpen && (
+                <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-purple-100 p-6 flex flex-col space-y-4 shadow-xl">
+                  {['Home','Experience', 'Testimonials', 'Content','newsletter'].map((item) => (
+                    <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setIsOpen(false)} className="text-slate-600 hover:text-[#9F51D6] block py-2 font-medium">
+                      {item}
+                    </a>
+                  ))}
+                </div>
+              )}
+            </nav>
+          );
+        };
+
+        const Hero = () => {
+          return (
+            <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden" aria-label="Introduction">
+              <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-200/40 rounded-full blur-[128px] pointer-events-none" />
+              <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-fuchsia-200/40 rounded-full blur-[128px] pointer-events-none" />
+
+              <div className="max-w-7xl mx-auto px-6 flex flex-col-reverse md:flex-row gap-16 items-center relative z-10">
+                <div className="animate-fade-in-up">
+                  <div className="inline-flex items-center px-3 py-1 rounded-full border border-purple-200 bg-purple-50 text-[#9F51D6] text-xs font-medium tracking-wider uppercase mb-8">
+                    🚀 Empowering The Next Gen
+                  </div>
+                  <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 leading-tight mb-8">
+                    Building <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9F51D6] to-fuchsia-500">Lifelong Learners</span> Who Code.
+                  </h1>
+                  <p className="text-lg text-slate-600 max-w-lg leading-relaxed mb-8">
+                    All my life, I meet inspiring individuals, learn from them, and share the wisdom I receive with future generations. Now on a mission to help <span className="text-[#5B219E] font-bold">10,000 students</span> secure tech jobs by 2028.
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-4">
+                    <button className="px-8 py-3.5 rounded-xl bg-gradient-to-r from-[#9F51D6] to-fuchsia-600 text-white font-medium text-lg shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:-translate-y-1 transition-all flex items-center justify-center gap-2">
+                      Explore More
+                    </button>
+                    <div className="flex gap-2">
+                      {[
+                        { Icon: Linkedin, href: "#", label: "Visit LinkedIn Profile" },
+                        { Icon: Youtube, href: "#", label: "Visit YouTube Channel" },
+                        { Icon: Facebook, href: "#", label: "Visit Facebook Profile" }
+                      ].map(({ Icon, href, label }, i) => (
+                        <a key={i} href={href} aria-label={label} className="p-4 rounded-xl rounded-full bg-white border border-slate-200 hover:border-[#9F51D6] hover:text-[#9F51D6] text-slate-500 transition-all shadow-sm">
+                          <Icon size={20} />
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="animate-fade-in-up w-full md:w-4/5">
+                    <img 
+                      src="./Group 1.png" 
+                      onError={(e) => {
+                          e.target.onerror = null; 
+                          e.target.src = "./Group 1.png";
+                      }}
+                      alt="Abdur Rakib - COO Programming Hero" 
+                      className="w-full object-contain"
+                      width="600"
+                      height="600"
+                    />
+                </div>
+              </div>
+            </section>
+          );
+        };
+
+        const Stats = () => {
+          return (
+            <section className="py-20 relative z-10" aria-label="Impact Statistics">
+              <div className="max-w-7xl mx-auto px-6">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                  {[
+                    { label: "Global Job Placements", value: "5,500+", icon: Briefcase },
+                    { label: "Countries with Students Working Remotely", value: "57", icon: Globe },
+                    { label: "Devs Trained/Year", value: "1,400+", icon: Users },
+                    { label: "Team Members", value: "130+", icon: Award },
+                  ].map((stat, idx) => (
+                    <div key={idx} className="p-6 rounded-2xl bg-white border border-slate-100 shadow-[0_4px_20px_-4px_rgba(159,81,214,0.08)] hover:shadow-[0_8px_30px_-4px_rgba(159,81,214,0.15)] hover:border-purple-200 transition-all group">
+                      <stat.icon className="w-8 h-8 text-[#9F51D6] mb-4 group-hover:scale-110 transition-transform" />
+                      <h3 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-1">{stat.value}</h3>
+                      <p className="text-slate-500 text-sm font-medium">{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+          );
+        };
+
+        const TimelineItem = ({ year, title, company, items, side, delayClass }) => {
+          return (
+            <article className={`relative flex items-start justify-between md:justify-normal gap-8 w-full group reveal ${delayClass} ${side === 'left' ? 'md:flex-row-reverse' : ''}`}>
+              
+              <div className={`hidden md:block w-5/12 text-right ${side === 'left' ? 'text-left' : ''}`}>
+                <span className="text-2xl font-bold text-[#9F51D6]/40 group-hover:text-[#9F51D6] transition-colors">
+                  {year}
+                </span>
+              </div>
+
+              <div className="absolute left-[22px] md:left-1/2 md:-ml-[9px] w-[18px] h-[18px] rounded-full border-4 border-[#F9F8FD] bg-slate-300 group-hover:bg-[#9F51D6] group-hover:scale-125 transition-all z-20 shadow-md"></div>
+
+              <div className="w-full md:w-5/12 pl-12 md:pl-0">
+                <div className="p-6 md:p-8 rounded-2xl bg-white border border-slate-100 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_-4px_rgba(159,81,214,0.15)] hover:border-purple-200 transition-all">
+                  <div className="flex flex-col mb-4">
+                     <span className="md:hidden text-sm font-bold text-[#9F51D6] mb-1">{year}</span>
+                     <h3 className="text-xl font-bold text-slate-900">{title}</h3>
+                     <p className="text-[#5B219E] text-sm font-bold">{company}</p>
+                  </div>
+                  <ul className="space-y-3">
+                    {items.map((item, i) => (
+                      <li key={i} className="flex items-start text-sm text-slate-600 leading-relaxed">
+                        <span className="mr-3 mt-1.5 w-1.5 h-1.5 rounded-full bg-[#9F51D6] flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </article>
+          );
+        };
+
+        const Experience = () => {
+          useEffect(() => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1, 
+                rootMargin: "0px 0px -50px 0px" 
+            });
+
+            const elements = document.querySelectorAll('.reveal');
+            elements.forEach((el) => observer.observe(el));
+
+            return () => {
+                elements.forEach((el) => observer.unobserve(el));
+            };
+          }, []);
+
+          const experiences = [
+            {
+              year: "2020 - PRESENT",
+              title: "Chief Operating Officer",
+              company: "Programming Hero & Phitron",
+              items: [
+                "5,500+ job placements across 57 countries",
+                "Scaled team from 13 to 130+ in 5 years",
+                "1,400+ junior developers trained annually",
+                "Built transparent OKR systems and servant leadership culture"
+              ]
+            },
+            {
+              year: "2024 - PRESENT",
+              title: "Strategic Advisor",
+              company: "Exprovia (Web Agency)",
+              items: [
+                "350+ projects delivered across 20+ countries",
+                "4.9★ rating on Fiverr & Upwork",
+                "Scaling team 15 → 100 members over 3 years",
+                "Building global software development wing"
+              ]
+            },
+            {
+              year: "2022 - 2023",
+              title: "Strategic Assistant to COO",
+              company: "Brain Station 23",
+              items: [
+                "Led Dubai & Japan market expansion",
+                "Strategic initiatives for executive team & board",
+                "Tracked strategic performance and market reports",
+                "Coordinated international growth partnerships"
+              ]
+            },
+            {
+              year: "2020 - 2021",
+              title: "Technical Project Manager",
+              company: "MetLife Bangladesh (via Brain Station 23)",
+              items: [
+                "Led digital transformation with bKash integration",
+                "Developed eKYC system for trust and safety",
+                "Built customer portal and payment systems"
+              ]
+            }
+          ];
+
+          return (
+            <section id="experience" className="py-24 relative overflow-hidden" aria-label="Professional Experience">
+              <div className="max-w-7xl mx-auto px-6 relative z-10">
+                <div className="text-center mb-20 reveal">
+                  <p className="text-[#9F51D6] font-bold tracking-wider text-sm uppercase mb-2">Core Functionality</p>
+                  <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Experience & Impact</h2>
+                  <p className="text-slate-500">Developer → PM → Strategic Leader → COO</p>
+                </div>
+
+                <div className="relative">
+                  <div className="absolute left-[30px] md:left-1/2 top-0 bottom-0 w-[2px] bg-slate-200"></div>
+                  
+                  <div className="space-y-12">
+                    {experiences.map((exp, idx) => (
+                      <TimelineItem 
+                        key={idx} 
+                        {...exp} 
+                        side={idx % 2 === 0 ? 'right' : 'left'} 
+                        delayClass={idx % 2 === 0 ? 'delay-100' : 'delay-300'}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </section>
+          );
+        };
+
+        const Testimonials = () => {
+          const scrollContainerRef = useRef(null);
+
+          const scroll = (direction) => {
+            const container = scrollContainerRef.current;
+            if (container) {
+                // Scroll by width of one card + gap approx
+                const scrollAmount = direction === 'left' ? -350 : 350;
+                container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+          };
+
+          const quotes = [
+            {
+              text: "Takes challenges head-on. Strategic, hard-working, and genuinely cares about each team member's growth. Perfectly balances team dynamics.",
+              author: "Jhankar Mahbub",
+              role: "CEO",
+              company: "Programming Hero"
+            },
+            {
+              text: "Best project manager you can get. Leads with excellence during crisis, manages deadlines flawlessly, and has people skills that make teams thrive.",
+              author: "Md. Jaid Bin Hashem",
+              role: "Software Engineer",
+              company: "Mercari"
+            },
+            {
+              text: "Creative problem-solver with heart. Energetic, enthusiastic, and makes people happy. Excellent communication skills. You can trust him.",
+              author: "Jahangir Alam",
+              role: "Software Architect",
+              company: "Brain Station 23"
+            },
+            // Duplicates for Slider
+             {
+              text: "Takes challenges head-on. Strategic, hard-working, and genuinely cares about each team member's growth. Perfectly balances team dynamics.",
+              author: "Jhankar Mahbub",
+              role: "CEO",
+              company: "Programming Hero"
+            },
+            {
+              text: "Best project manager you can get. Leads with excellence during crisis, manages deadlines flawlessly, and has people skills that make teams thrive.",
+              author: "Md. Jaid Bin Hashem",
+              role: "Software Engineer",
+              company: "Mercari"
+            },
+            {
+              text: "Creative problem-solver with heart. Energetic, enthusiastic, and makes people happy. Excellent communication skills. You can trust him.",
+              author: "Jahangir Alam",
+              role: "Software Architect",
+              company: "Brain Station 23"
+            }
+          ];
+
+          return (
+            <section id="testimonials" className="py-24 bg-white relative overflow-hidden" aria-label="Testimonials">
+               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-purple-50 via-white to-transparent opacity-70 pointer-events-none"></div>
+
+              <div className="max-w-7xl mx-auto px-6 relative z-10">
+                <div className="text-center mb-16">
+                    <span className="inline-block py-1 px-3 rounded-full bg-[#F9F8FD] border border-purple-100 text-[#9F51D6] text-xs font-bold tracking-wider uppercase mb-4 shadow-sm">
+                        Testimonials
+                    </span>
+                    <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">What Leaders Say</h2>
+                    <p className="text-slate-500 max-w-2xl mx-auto text-lg">
+                        Real feedback from executives and engineers I've collaborated with over the years.
+                    </p>
+                </div>
+                
+                {/* Slider Container */}
+                <div className="relative">
+                    {/* Left Button */}
+                    <button 
+                        onClick={() => scroll('left')}
+                        aria-label="Previous Testimonial"
+                        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-20 w-12 h-12 rounded-full bg-white border border-purple-100 shadow-lg text-[#5B219E] flex items-center justify-center hover:scale-110 hover:bg-[#F9F8FD] transition-all hidden md:flex"
+                    >
+                        <ChevronLeft />
+                    </button>
+
+                    {/* Scrollable Area */}
+                    <div 
+                        ref={scrollContainerRef}
+                        className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-8 no-scrollbar scroll-smooth px-4 md:px-0"
+                    >
+                      {quotes.map((quote, idx) => (
+                        <div key={idx} className="snap-center shrink-0 w-full md:w-[calc(33.333%-16px)]">
+                            <div className="h-full group p-8 rounded-[2rem] bg-white border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_-5px_rgba(159,81,214,0.1)] hover:border-purple-200 transition-all duration-300 hover:-translate-y-2 relative flex flex-col justify-between">
+                              <div className="absolute top-8 right-8 text-8xl leading-none text-purple-100/50 font-serif select-none -z-10 group-hover:text-purple-100 transition-colors">"</div>
+                              
+                              <div>
+                                  <div className="flex items-center gap-4 mb-6">
+                                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#9F51D6] to-fuchsia-500 p-[2px] shadow-sm">
+                                        <div className="w-full h-full rounded-full bg-white flex items-center justify-center text-xs font-bold text-[#5B219E]">
+                                            {quote.author.split(' ').map(n => n[0]).join('').slice(0,2)}
+                                        </div>
+                                    </div>
+                                    <div>
+                                       <h4 className="font-bold text-slate-900 text-sm">{quote.author}</h4>
+                                       <p className="text-xs text-slate-500 mt-0.5 font-medium">{quote.role} @ <span className="text-[#9F51D6]">{quote.company}</span></p>
+                                    </div>
+                                  </div>
+
+                                  <div className="flex gap-1 mb-4">
+                                    {[1,2,3,4,5].map(i => (
+                                        <svg key={i} className="w-4 h-4 text-amber-400 fill-current" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                        </svg>
+                                    ))}
+                                  </div>
+
+                                  <p className="text-slate-600 leading-relaxed font-medium text-[0.95rem]">
+                                    "{quote.text}"
+                                  </p>
+                              </div>
+                            </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Right Button */}
+                    <button 
+                        onClick={() => scroll('right')}
+                        aria-label="Next Testimonial"
+                        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-20 w-12 h-12 rounded-full bg-white border border-purple-100 shadow-lg text-[#5B219E] flex items-center justify-center hover:scale-110 hover:bg-[#F9F8FD] transition-all hidden md:flex"
+                    >
+                        <ChevronRight />
+                    </button>
+                </div>
+                
+                {/* Mobile Scroll Hint */}
+                <div className="flex justify-center gap-2 mt-4 md:hidden">
+                    {[1,2,3,4,5,6].map((_, i) => (
+                        <div key={i} className="w-2 h-2 rounded-full bg-slate-200"></div>
+                    ))}
+                </div>
+
+              </div>
+            </section>
+          );
+        };
+
+        const WhereIShare = () => {
+          const items = [
+            {
+              title: "Career Crackerz",
+              desc: "Career conversations with tech leaders",
+              category: "Podcast",
+              image: "./career crackerz.jpg",
+              link: "#"
+            },
+            {
+              title: "Borderless Bangladeshi",
+              desc: "Stories of Bangladeshi impact",
+              category: "podcast",
+              image: "./borderless.png", 
+              link: "#"
+            },
+            {
+              title: "Facebook",
+              desc: "Daily insights on leadership",
+              category: "FB Page",
+              image: "./fb-page.png", 
+              link: "#"
+            },
+            {
+              title: "YouTube",
+              desc: "Full interviews & talks",
+              category: "YT Channel",
+              image: "./youtube.png", 
+              link: "#"
+            }
+          ];
+
+          return (
+            <section id="content" className="py-24 relative overflow-hidden bg-[#F9F8FD]" aria-label="Social Media Channels">
+              
+              <div className="max-w-7xl mx-auto px-6 relative z-10">
+                <div className="text-center mb-16">
+                  <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Where I Share</h2>
+                  <p className="text-slate-600 max-w-2xl mx-auto text-lg">
+                    Building in public. Sharing knowledge about scaling, leadership, EdTech, and building careers in tech.
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {items.map((item, i) => (
+                    <a key={i} href={item.link} aria-label={item.title} className="group flex flex-col bg-white rounded-[2rem] overflow-hidden border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 hover:-translate-y-2">
+                      {/* Image Container */}
+                      <div className="relative h-56 overflow-hidden">
+                        <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors z-10"></div>
+                        <img 
+                          src={item.image} 
+                          alt={item.title} 
+                          loading="lazy"
+                          className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                        />
+                        {/* Category Badge - Top Right */}
+                        <div className="absolute top-4 right-4 z-20 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl text-xs font-bold text-[#5B219E] shadow-sm border border-purple-100 flex items-center gap-1.5">
+                           <span className="w-1.5 h-1.5 rounded-full bg-[#9F51D6] animate-pulse"></span>
+                           {item.category}
+                        </div>
+                      </div>
+                      
+                      {/* Content */}
+                      <div className="p-6 flex-1 flex flex-col">
+                        <h4 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-[#9F51D6] transition-colors">{item.title}</h4>
+                        <p className="text-slate-500 text-sm leading-relaxed mb-4">{item.desc}</p>
+                        
+                        <div className="mt-auto flex items-center text-[#9F51D6] text-sm font-bold opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                          View Content <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
+                        </div>
+                      </div>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </section>
+          );
+        };
+
+        const Newsletter = () => {
+          return (
+            <section id="newsletter" className="py-24 px-6 relative overflow-hidden" aria-label="Newsletter Subscription">
+              {/* Background Glows */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-300/30 rounded-full blur-[120px] pointer-events-none"></div>
+
+              <div className="max-w-6xl mx-auto relative z-10">
+                <div className="bg-[#1A0B2E] rounded-[3rem] p-8 md:p-16 relative overflow-hidden shadow-2xl shadow-purple-900/20">
+                  
+                  {/* Decorative Gradients inside card */}
+                  <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#9F51D6] opacity-20 blur-[100px] rounded-full pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
+                  <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-blue-600 opacity-20 blur-[80px] rounded-full pointer-events-none translate-y-1/2 -translate-x-1/2"></div>
+
+                  <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
+                    
+                    {/* Text Content */}
+                    <div className="text-left space-y-6">
+                      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/10 text-purple-200 text-xs font-normal uppercase tracking-wider backdrop-blur-md">
+                        <span className="w-2 h-2 rounded-full bg-[#9F51D6] animate-pulse"></span>
+                        Monthly Insights
+                      </div>
+                      
+                      <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+                        Elevate your <br/>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#9F51D6] to-pink-500">Leadership Journey</span>
+                      </h2>
+                      
+                      <p className="text-slate-300 text-lg leading-relaxed max-w-md">
+                        Join 10,000+ engineers and leaders receiving my best tips on scaling teams, career growth, and tech trends.
+                      </p>
+
+                      <ul className="space-y-3">
+                        {['No spam, ever', 'Unsubscribe anytime', 'Monthly exclusive content'].map((item, i) => (
+                          <li key={i} className="flex items-center gap-3 text-slate-400 text-sm font-medium">
+                            <div className="w-5 h-5 rounded-full bg-[#9F51D6]/20 flex items-center justify-center text-[#9F51D6]">
+                              <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" /></svg>
+                            </div>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Form Card */}
+                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-[2rem] relative group hover:bg-white/10 transition-colors duration-500">
+                      <div className="absolute -top-10 -right-10 w-24 h-24 bg-gradient-to-br from-[#9F51D6] to-blue-600 rounded-2xl rotate-12 opacity-50 blur-xl group-hover:opacity-70 transition-all duration-500 animate-pulse"></div>
+                      
+                      <h3 className="text-2xl font-bold text-white mb-2">Subscribe Now</h3>
+                      <p className="text-slate-400 mb-8 text-sm">Get the blueprint to your inbox.</p>
+                      
+                      <form className="space-y-4">
+                        <div className="space-y-2">
+                          <label className="text-xs font-bold text-slate-300 uppercase tracking-wide ml-1">Email Address</label>
+                          <input 
+                            type="email" 
+                            placeholder="name@example.com" 
+                            className="w-full px-6 py-4 rounded-xl bg-slate-900/50 border border-white/10 text-white placeholder-slate-500 focus:outline-none focus:border-[#9F51D6] focus:ring-1 focus:ring-[#9F51D6] transition-all"
+                          />
+                        </div>
+                        <button className="w-full py-4 rounded-xl bg-gradient-to-r from-[#9F51D6] to-fuchsia-600 text-white font-bold text-lg shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:-translate-y-1 transition-all flex items-center justify-center gap-2 group-hover:scale-[1.02]">
+                          Join the list <Send size={20} />
+                        </button>
+                      </form>
+                      <p className="text-center text-slate-500 text-xs mt-6">
+                        By subscribing, you agree to our Terms & Privacy Policy.
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </section>
+          );
+        };
+
+        const Footer = () => {
+          // --- CONFIGURATION: Update your links here ---
+          const socialLinks = [
+            { name: 'Facebook', url: 'https://www.facebook.com/abdurrakibzero/' },
+            { name: 'LinkedIn', url: 'https://bd.linkedin.com/in/abdurrakib0' },
+            { name: 'Youtube', url: 'https://www.youtube.com/@abdurrakib0' },
+            { name: 'Email', url: 'mailto:your@email.com' }
+          ];
+
+          return (
+            <footer className="relative bg-[#1A0B2E] pt-32 pb-12 overflow-hidden">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-32 bg-[#9F51D6] opacity-30 blur-[100px]"></div>
+
+              <div className="max-w-7xl mx-auto px-6 relative z-10">
+                
+                {/* Name & Title Section */}
+                <div className="relative mb-16 select-none flex flex-col items-center">
+                  <h1 className="text-[10vw] md:text-[11vw] font-black text-transparent bg-clip-text bg-gradient-to-b from-white/20 to-white/5 leading-none tracking-tighter text-center mix-blend-overlay">
+                    ABDUR RAKIB
+                  </h1>
+                  
+                  <div className="mt-4 text-center">
+                    <h2 className="text-xl md:text-3xl font-bold text-white tracking-wide opacity-70">
+                      COO <span className="text-purple-300">Programming Hero</span> & <span className="text-fuchsia-300">Phitron</span>
+                    </h2>
+                  </div>
+                </div>
+
+                {/* Bottom Bar */}
+                <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10 gap-6">
+                  <p className="text-slate-400 text-sm font-medium">
+                    ©2025 Abdur Rakib. Built for Growth.
+                  </p>
+
+                  <div className="flex gap-6">
+                     {socialLinks.map((item) => (
+                       <a 
+                         key={item.name} 
+                         href={item.url} 
+                         target="_blank" 
+                         rel="noopener noreferrer"
+                         className="text-slate-400 hover:text-white text-sm font-bold uppercase tracking-wider transition-colors hover:underline decoration-white decoration-2 underline-offset-4"
+                       >
+                         {item.name}
+                       </a>
+                     ))}
+                  </div>
+                </div>
+              </div>
+            </footer>
+          );
+        };
+
+        const App = () => {
+          return (
+            <main className="bg-[#F9F8FD] min-h-screen text-slate-900 selection:bg-[#9F51D6]/30 font-sans">
+              <Navbar />
+              <Hero />
+              <Stats />
+              <Experience />
+              <Testimonials />
+              <WhereIShare />
+              <Newsletter />
+              <Footer />
+            </main>
+          );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
