@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdur Rakib – COO of Programming Hero | 5,500+ Jobs in 57 Countries</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Abdur Rakib: COO scaling Programming Hero to 5,500+ global jobs. 1,400+ junior developers trained annually. 57 countries. 130+ team. Building global tech careers.">
+    <meta name="keywords" content="Abdur Rakib, Programming Hero, COO, EdTech Bangladesh, Global Tech Jobs, Software Development">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Abdur Rakib",
+      "jobTitle": "Chief Operating Officer",
+      "worksFor": [
+        {"@type": "Organization", "name": "Programming Hero"},
+        {"@type": "Organization", "name": "Phitron"}
+      ]
+    }
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --bg: #FAFAFA;
+            --card: #FFFFFF;
+            --black: #0A0A0A;
+            --gray-700: #3A3A3A;
+            --gray-600: #5A5A5A;
+            --gray-500: #6B6B6B;
+            --gray-300: #D1D5DB;
+            --accent: #6366F1;
+            --accent-light: #E0E7FF;
+            --accent-dark: #4F46E5;
+            --success: #10B981;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--bg);
+            color: var(--black);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* ====== NAVIGATION ====== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(250, 250, 250, 0.92);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            z-index: 1000;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(209, 213, 219, 0.5);
+        }
+        
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        nav .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent) 0%, #8B5CF6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-3px); }
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: var(--gray-500);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--accent);
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        /* ====== HERO SECTION ====== */
+        .hero {
+            padding: 110px 0 50px;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.05;
+            margin-bottom: 1.5rem;
+            color: var(--black);
+            letter-spacing: -0.03em;
+        }
+        
+        .hero-text h1 .highlight {
+            background: linear-gradient(135deg, var(--accent) 0%, #8B5CF6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 3s infinite;
+        }
+        
+        @keyframes shimmer {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.85; }
+        }
+        
+        @keyframes fillTimeline {
+            from {
+                background: linear-gradient(180deg, var(--accent) 0%, var(--accent-light) 0%);
+            }
+            to {
+                background: linear-gradient(180deg, var(--accent) 0%, var(--accent-light) 100%);
+            }
+        }
+        
+        .hero-text .bio {
+            font-size: 1rem;
+            color: var(--gray-700);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+            font-weight: 400;
+        }
+        
+        .bio .accent-word {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .hero-image {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, var(--accent-light) 0%, rgba(224, 231, 255, 0.5) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 2px solid var(--gray-300);
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.9;
+        }
+        
+        /* ====== COMPANY BOXES ====== */
+        .companies-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .company-box {
+            padding: 1.4rem 1.6rem;
+            background: var(--card);
+            border: 2px solid var(--gray-300);
+            border-radius: 14px;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .company-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s;
+            pointer-events: none;
+        }
+        
+        .company-box:hover::before {
+            opacity: 1;
+        }
+        
+        .company-box:hover {
+            border-color: var(--accent);
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 16px 32px rgba(99, 102, 241, 0.18);
+        }
+        
+        .company-icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .company-name {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--black);
+        }
+        
+        .company-tagline {
+            font-size: 0.75rem;
+            color: var(--gray-500);
+            line-height: 1.5;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 0.8rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.7rem 1.2rem;
+            background: var(--card);
+            border: 2px solid var(--accent);
+            border-radius: 8px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+            transition: left 0.5s;
+        }
+        
+        .social-btn:hover {
+            background: var(--accent-light);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.25);
+            transform: translateY(-2px);
+        }
+        
+        .social-btn:hover::before {
+            left: 100%;
+        }
+        
+        /* ====== STATS SECTION ====== */
+        .stats {
+            padding: 60px 0;
+            background: linear-gradient(180deg, rgba(99, 102, 241, 0.05) 0%, transparent 100%);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: var(--card);
+            border-radius: 16px;
+            border: 2px solid var(--gray-300);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s;
+        }
+        
+        .stat-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+            animation: slideIn 3s infinite;
+        }
+        
+        @keyframes slideIn {
+            0% { left: -100%; }
+            50% { left: 100%; }
+            100% { left: 100%; }
+        }
+        
+        .stat-item:hover {
+            border-color: var(--accent);
+            box-shadow: 0 12px 28px rgba(99, 102, 241, 0.15);
+            transform: translateY(-4px);
+        }
+        
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 0.8rem;
+            animation: countUp 2s ease-out forwards;
+        }
+        
+        @keyframes countUp {
+            0% { transform: translateY(20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--gray-700);
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            line-height: 1.4;
+        }
+        
+        /* ====== JOURNEY/TIMELINE SECTION ====== */
+        #journey {
+            padding: 80px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--black);
+            letter-spacing: -0.02em;
+        }
+        
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            font-weight: 400;
+        }
+        
+        .timeline {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--accent) 0%, var(--accent-light) 100%);
+            transform: translateX(-50%);
+            animation: fillTimeline linear forwards;
+            animation-timeline: view();
+            animation-range: entry 0% cover 100%;
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.4), 0 0 20px rgba(99, 102, 241, 0.2);
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: linear-gradient(180deg, rgba(99, 102, 241, 0.2) 0%, rgba(99, 102, 241, 0) 100%);
+            transform: translateX(-50%);
+            pointer-events: none;
+        }
+        
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            grid-column: 1;
+            text-align: right;
+            padding-right: 3rem;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            grid-column: 2;
+            text-align: left;
+            padding-left: 3rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 2rem;
+            width: 16px;
+            height: 16px;
+            background: white;
+            border: 3px solid var(--accent);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            box-shadow: 0 0 0 8px var(--bg), 0 0 0 11px var(--accent);
+        }
+        
+        .timeline-content {
+            padding: 1.8rem;
+            background: var(--card);
+            border-radius: 12px;
+            border: 2px solid var(--gray-300);
+            transition: all 0.4s;
+        }
+        
+        .timeline-content:hover {
+            border-color: var(--accent);
+            box-shadow: 0 12px 28px rgba(99, 102, 241, 0.12);
+            transform: translateY(-4px);
+        }
+        
+        .timeline-year {
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+        
+        .timeline-role {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-company {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .timeline-highlights {
+            list-style: none;
+            font-size: 0.88rem;
+            color: var(--gray-700);
+            line-height: 1.7;
+        }
+        
+        .timeline-highlights li {
+            margin-bottom: 0.6rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .timeline-highlights li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 700;
+        }
+        
+        .timeline-highlights .impact {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .company-tags {
+            display: flex;
+            gap: 0.6rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        
+        .company-tag {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            background: var(--accent-light);
+            color: var(--accent);
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+        }
+        
+        /* ====== RECOMMENDATIONS SECTION ====== */
+        .recommendations {
+            padding: 80px 0;
+            background: linear-gradient(180deg, var(--accent-light) 0%, transparent 100%);
+        }
+        
+        .rec-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+        
+        .rec-card {
+            padding: 2.2rem;
+            background: var(--card);
+            border-radius: 16px;
+            border: 2px solid var(--gray-300);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            display: flex;
+            flex-direction: column;
+            min-height: 280px;
+        }
+        
+        .rec-card::before {
+            content: '"';
+            position: absolute;
+            top: -30px;
+            left: -20px;
+            font-size: 8rem;
+            color: var(--accent-light);
+            font-weight: 700;
+            z-index: 0;
+        }
+        
+        .rec-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 16px 40px rgba(99, 102, 241, 0.18);
+            transform: translateY(-8px);
+            background: linear-gradient(135deg, #F0F4FF 0%, var(--card) 100%);
+        }
+        
+        .rec-text {
+            font-size: 1.05rem;
+            color: var(--gray-700);
+            line-height: 1.85;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+            position: relative;
+            z-index: 1;
+            font-weight: 500;
+        }
+        
+        .rec-text .highlight {
+            color: var(--accent);
+            font-weight: 700;
+        }
+        
+        .rec-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: auto;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--gray-300);
+        }
+        
+        .rec-avatar {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--accent) 0%, #8B5CF6 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+        
+        .rec-info h4 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 0.2rem;
+        }
+        
+        .rec-info p {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+            font-weight: 500;
+        }
+        
+        /* ====== CONTENT SECTION ====== */
+        #content {
+            padding: 80px 0;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .content-card {
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--card) 0%, #F9FAFB 100%);
+            border: 2px solid var(--gray-300);
+            border-radius: 16px;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(99, 102, 241, 0.08) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        
+        .content-card:hover::before {
+            opacity: 1;
+        }
+        
+        .content-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 16px 40px rgba(99, 102, 241, 0.15);
+            transform: translateY(-8px);
+        }
+        
+        .content-icon {
+            font-size: 2.5rem;
+            display: block;
+        }
+        
+        .content-info h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--black);
+            transition: color 0.3s;
+        }
+        
+        .content-card:hover .content-info h3 {
+            color: var(--accent);
+        }
+        
+        .content-info p {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+        
+        /* ====== CTA SECTION ====== */
+        .cta-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, var(--accent) 0%, #8B5CF6 100%);
+        }
+        
+        .cta-content {
+            text-align: center;
+            color: white;
+        }
+        
+        .cta-content h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .cta-content p {
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            gap: 0.8rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.9rem 1.4rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-family: 'Space Grotesk', sans-serif;
+            transition: all 0.3s;
+        }
+        
+        .newsletter-form input:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+        }
+        
+        .newsletter-form button {
+            padding: 0.9rem 2rem;
+            background: white;
+            color: var(--accent);
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        
+        .newsletter-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* ====== FOOTER ====== */
+        footer {
+            padding: 3rem 0;
+            background: var(--black);
+            color: white;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: var(--accent-light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        footer a:hover {
+            color: white;
+        }
+        
+        /* ====== MOBILE RESPONSIVE ====== */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                grid-column: 1;
+                text-align: left;
+                padding-left: 0;
+                padding-right: 0;
+                margin-left: 60px;
+            }
+            
+            .timeline-item::before {
+                left: 10px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            
+            .rec-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .rec-card {
+                padding: 1.8rem;
+                min-height: auto;
+            }
+            
+            .rec-text {
+                font-size: 0.95rem;
+                line-height: 1.7;
+            }
+            
+            .rec-info h4 {
+                font-size: 0.9rem;
+            }
+            
+            .rec-info p {
+                font-size: 0.75rem;
+            }
+            
+            .content-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            nav .container {
+                padding: 0 1rem;
+            }
+            
+            .hero {
+                padding: 90px 0 40px;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.2rem;
+                line-height: 1.15;
+            }
+            
+            .hero-text .bio {
+                font-size: 0.95rem;
+            }
+            
+            .companies-grid {
+                grid-template-columns: 1fr;
+                gap: 0.8rem;
+            }
+            
+            .company-box {
+                padding: 1.2rem;
+            }
+            
+            .social-links {
+                gap: 0.6rem;
+            }
+            
+            .social-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.8rem;
+            }
+            
+            .stats {
+                padding: 40px 0;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            .stat-item {
+                padding: 1.5rem 1rem;
+            }
+            
+            .stat-number {
+                font-size: 2.2rem;
+            }
+            
+            .stat-label {
+                font-size: 0.85rem;
+            }
+            
+            #journey {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .timeline-content {
+                margin-left: 40px;
+            }
+            
+            .timeline-item::before {
+                left: 8px;
+            }
+            
+            .timeline::before {
+                left: 16px;
+            }
+            
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .content-card {
+                padding: 1.5rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .newsletter-form button {
+                width: 100%;
+            }
+        }
+        
+        strong {
+            font-weight: 700;
+            color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Abdur Rakib</div>
+            <ul>
+                <li><a href="#journey">Experience</a></li>
+                <li><a href="#recommendations">Testimonials</a></li>
+                <li><a href="#content">Content</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Building <span class="highlight">lifelong learners</span> who code their way to <span class="highlight">meaningful careers</span></h1>
+                    <p class="bio">
+                        All my life, I meet inspiring individuals, learn from them, and share the wisdom I receive with future generations. Now I'm on a mission to help <span class="accent-word">10,000 students each year</span> secure global tech jobs by 2028.
+                    </p>
+                    
+                    <!-- Companies Grid -->
+                    <div class="companies-grid">
+                        <a href="https://programming-hero.com" target="_blank" class="company-box">
+                            <div class="company-icon">🎓</div>
+                            <div class="company-name">Programming Hero</div>
+                            <div class="company-tagline">Let's code your career</div>
+                        </a>
+                        <a href="https://phitron.io" target="_blank" class="company-box">
+                            <div class="company-icon">💻</div>
+                            <div class="company-name">Phitron</div>
+                            <div class="company-tagline">Build your foundation as a programmer</div>
+                        </a>
+                        <a href="https://exprovia.com" target="_blank" class="company-box">
+                            <div class="company-icon">🌐</div>
+                            <div class="company-name">Exprovia</div>
+                            <div class="company-tagline">Custom software development</div>
+                        </a>
+                    </div>
+                    
+                    <!-- Social Links -->
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/abdurrakib0" target="_blank" class="social-btn">🔗 LinkedIn</a>
+                        <a href="https://twitter.com" target="_blank" class="social-btn">𝕏 Twitter</a>
+                        <a href="https://facebook.com" target="_blank" class="social-btn">📘 Facebook</a>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <img src="./Abdur_Rakib_Vaiya_2.JPG" alt="Abdur Rakib">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">5,500+</div>
+                    <div class="stat-label">Job Placements</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">57</div>
+                    <div class="stat-label">Countries with Students Working Remotely</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1,400+</div>
+                    <div class="stat-label">Junior Web Devs/Year</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">130+</div>
+                    <div class="stat-label">Team Members</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section id="journey">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience & Impact</h2>
+                <p class="section-subtitle">Developer → PM → Strategic Leader → COO</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2020 – Present</div>
+                        <div class="timeline-role">Chief Operating Officer</div>
+                        <div class="timeline-company">Programming Hero & Phitron</div>
+                        <ul class="timeline-highlights">
+                            <li><span class="impact">5,500+ job placements</span> across 57 countries</li>
+                            <li><span class="impact">Scaled team 13 → 130+</span> in 5 years</li>
+                            <li><span class="impact">1,400+ junior developers</span> trained annually</li>
+                            <li>Built transparent OKR systems and servant leadership culture</li>
+                            <li>Launched Phitron vertical for computer science fundamentals</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2024 – Present</div>
+                        <div class="timeline-role">Strategic Advisor</div>
+                        <div class="timeline-company">Exprovia (Web Agency)</div>
+                        <ul class="timeline-highlights">
+                            <li><span class="impact">350+ projects delivered</span> across 20+ countries</li>
+                            <li><span class="impact">4.9★ rating</span> on Fiverr & Upwork</li>
+                            <li>Scaling team 15 → 100 members over 3 years</li>
+                            <li>Building global software development wing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2022 – 2023</div>
+                        <div class="timeline-role">Strategic Assistant to COO</div>
+                        <div class="timeline-company">Brain Station 23</div>
+                        <ul class="timeline-highlights">
+                            <li><span class="impact">Led Dubai & Japan market expansion</span></li>
+                            <li>Strategic initiatives for executive team & board</li>
+                            <li>Tracked strategic performance and market reports</li>
+                            <li>Coordinated international growth partnerships</li>
+                        </ul>
+                        <div class="company-tags">
+                            <span class="company-tag">Dubai</span>
+                            <span class="company-tag">Japan</span>
+                            <span class="company-tag">Strategy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2020 – 2021</div>
+                        <div class="timeline-role">Technical Project Manager</div>
+                        <div class="timeline-company">MetLife Bangladesh (via Brain Station 23)</div>
+                        <ul class="timeline-highlights">
+                            <li>Led digital transformation with bKash integration</li>
+                            <li>Developed eKYC system for trust and safety</li>
+                            <li>Built customer portal and payment systems</li>
+                            <li>Managed cross-border test automation initiatives</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2018 – 2020</div>
+                        <div class="timeline-role">Software Project Coordinator & Engineer</div>
+                        <div class="timeline-company">Brain Station 23 (Engineering)</div>
+                        <ul class="timeline-highlights">
+                            <li><span class="impact">ACI Fosholi: 70K+ active users</span> - agritech platform</li>
+                            <li><span class="impact">Esho Shikhi: 33K users in 3 months</span> - EdTech pioneer</li>
+                            <li>Lazz Pharma digitalization: online delivery & e-pharma system</li>
+                            <li>Led 2-12 developer teams on 3+ concurrent projects</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">Feb – Jun 2020</div>
+                        <div class="timeline-role">Product Manager</div>
+                        <div class="timeline-company">Sheba.xyz (Service Marketplace)</div>
+                        <ul class="timeline-highlights">
+                            <li>Managed Bondhu Fintech product</li>
+                            <li>Reduced mobile topup failure from 7-8% to <1%</li>
+                            <li>Implemented eKYC for customer trust and fraud prevention</li>
+                            <li><span class="impact">17% GMV growth</span> during COVID-19 pandemic</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendations Section -->
+    <section id="recommendations" class="recommendations">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Leaders Say</h2>
+                <p class="section-subtitle">Real voices from colleagues and team members.</p>
+            </div>
+            
+            <div class="rec-grid">
+                <div class="rec-card">
+                    <p class="rec-text">
+                        <span class="highlight">Takes challenges head-on.</span> Strategic, hard-working, and genuinely cares about each team member's growth. Perfectly balances team dynamics with project goals.
+                    </p>
+                    <div class="rec-author">
+                        <div class="rec-avatar">JH</div>
+                        <div class="rec-info">
+                            <h4>Jhankar Mahbub</h4>
+                            <p>CEO @ Programming Hero</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="rec-card">
+                    <p class="rec-text">
+                        <span class="highlight">Best project manager you can get.</span> Leads with excellence during crisis, manages deadlines flawlessly, and has people skills that make teams thrive. Pure execution obsession.
+                    </p>
+                    <div class="rec-author">
+                        <div class="rec-avatar">JB</div>
+                        <div class="rec-info">
+                            <h4>Md. Jaid Bin Hashem</h4>
+                            <p>Software Engineer at Mercari</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="rec-card">
+                    <p class="rec-text">
+                        <span class="highlight">Creative problem-solver with heart.</span> Energetic, enthusiastic, and makes people happy. Excellent communication skills. You can trust him to bring success to every project.
+                    </p>
+                    <div class="rec-author">
+                        <div class="rec-avatar">JA</div>
+                        <div class="rec-info">
+                            <h4>Jahangir Alam</h4>
+                            <p>Software Architect | Java Developer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="rec-card">
+                    <p class="rec-text">
+                        <span class="highlight">Calm under pressure, expert organizer.</span> Assigns right people for right tasks. Gives clear direction, encouragement, and detailed guidance. Every team member feels part of the success.
+                    </p>
+                    <div class="rec-author">
+                        <div class="rec-avatar">AS</div>
+                        <div class="rec-info">
+                            <h4>Anupam Saha, PMP®</h4>
+                            <p>Business Architect | ERP Specialist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section id="content">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Where I Share</h2>
+                <p class="section-subtitle">Building in public. Sharing knowledge.</p>
+            </div>
+            
+            <div class="content-grid">
+                <a href="https://youtube.com" target="_blank" class="content-card">
+                    <span class="content-icon">🎙️</span>
+                    <div class="content-info">
+                        <h3>CC Podcast</h3>
+                        <p>Career conversations with tech leaders from Bangladesh and beyond</p>
+                    </div>
+                </a>
+                
+                <a href="https://youtube.com" target="_blank" class="content-card">
+                    <span class="content-icon">🌍</span>
+                    <div class="content-info">
+                        <h3>Borderless Bangladeshi</h3>
+                        <p>Stories of Bangladeshis making global impact in tech</p>
+                    </div>
+                </a>
+                
+                <a href="https://facebook.com" target="_blank" class="content-card">
+                    <span class="content-icon">📘</span>
+                    <div class="content-info">
+                        <h3>Facebook</h3>
+                        <p>Daily insights on leadership, EdTech, and career growth</p>
+                    </div>
+                </a>
+                
+                <a href="https://youtube.com" target="_blank" class="content-card">
+                    <span class="content-icon">🎥</span>
+                    <div class="content-info">
+                        <h3>YouTube</h3>
+                        <p>Full interviews, talks, and behind-the-scenes content</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Join the Movement</h2>
+                <p>Get monthly insights on scaling, leadership, EdTech, and building careers in tech from Bangladesh.</p>
+                <form class="newsletter-form" action="#" method="POST">
+                    <input type="email" placeholder="your@email.com" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2024–2025 Abdur Rakib. Building the next generation of tech talent</p>
+            <p style="margin-top: 1rem;">
+                <a href="https://programming-hero.com" target="_blank">Programming Hero</a> · 
+                <a href="https://phitron.io" target="_blank">Phitron</a> · 
+                <a href="https://exprovia.com" target="_blank">Exprovia</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
